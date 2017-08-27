@@ -3,5 +3,8 @@ language: python
 python:
     - "stable"
 
+install:
+    - pip install -U pip
+    - pip install django
 script:
     - python setup.py test
