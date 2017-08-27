@@ -1,14 +1,7 @@
 language: python
 
 python:
-  - "stable"
-
-install:
-  - pip install django flake8
-
-before_script:
-  - python manage.py migrate
+    - "stable"
 
 script:
-  - python manage.py test
-  - flake8 --exclude polls/migrations/,manage.py .
+    - python setup.py test
