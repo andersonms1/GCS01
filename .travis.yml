@@ -7,4 +7,5 @@ install:
     - pip install -U pip
     - pip install django
 script:
-    - python manage.py test
+    #- python manage.py test
+    - python manage.py runserver 0:8000
