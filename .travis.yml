@@ -5,7 +5,9 @@ python:
 
 install:
     - pip install -U pip
-    - pip install django
+    - pip install django flake8
+
 script:
-    #- python manage.py test
-    - python manage.py runserver 0:8000
+    - python manage.py test
+    - flake8 --exclude polls/migrations/,manage.py  .
+    #- python manage.py runserver 0:8000
